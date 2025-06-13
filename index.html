@@ -17,6 +17,10 @@
       overflow: auto;
     }
 
+    .wrapper {
+      position: relative;
+      padding-top: 50px; /* ensures space for image overlap */
+    }
 
     .invitation-card {
       text-align: center;
@@ -71,22 +75,25 @@
     /* top-right corner image */
     .top-right-image {
   position: absolute;
-  top: 40px;          /* Adjust Y-position */
-  right: 40px;        /* Adjust X-position */
-  width: 200px;       /* Control size */
-  height: auto;
-  border-radius: 12px;
+  top: -40px;          /* Adjust Y-position */
+  right: 20px;        /* Adjust X-position */
+  width: 80px;       /* Control size */
+  height: 80px;
+  border-radius: 50%;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   transition: transform 0.4s ease, opacity 0.4s ease;
+  border: 3px solid white;
+  object-fit: cover;
+  background: white;
+  z-index: 2;
 }
-    
 
   /* For mobile devices around 6.67" screens */
 @media (max-width: 500px) {
   .top-right-image {
     width: 25vw;  /* or use 25vw for responsive width */
-    top: 12px;
-    right: 12px;
+    top: -30px;
+    right: 15px;
   }
 }
 
@@ -137,6 +144,9 @@
       }
     }
 
+    h3{
+      font-family: 'Segoe UI', sans-serif;
+    }
 
   </style>
 </head>
@@ -169,15 +179,27 @@
   
 <body>
 
+  <!-- Wrap both inside a relative container -->
+   <div class="wrapper">
   <!-- Red box image (top-right corner) -->
   <img src="thakuma.jpg" alt="Top Right Image" class="top-right-image">
- 
 
   <div class="invitation-card">
     <h1><u>You're Invited ! </u> </h1>
-    <h1><u>For</u></h1>
-    <h1><u>Funeral Ceremony</u></h1>
+    <h4><u>For</u></h4>
+    <h3><u>Funeral Ceremony</u></h3>
+    <p>
+      *Main Ceremony (মহাশ্রাদ্ধ):*<br>
+      Date: Friday, 13th June 2025 (২৯শে জ্যৈষ্ঠ ১৪৩২ বঙ্গাব্দ)<br>
+      Time: 12:00 PM (দুপুর ১২ ঘটিকা)
+    </p>
+    <p>
+      *Location:*
+      <a href="https://www.google.com/maps/place/ghutgoria+Kali+Mandir/@23.4439942,87.2596343,17z/data=!3m1!4b1!4m6!3m5!1s0x39f7747d6f4a3d19:0x670738ec95685e7!8m2!3d23.4439893!4d87.2622092!16s%2Fg%2F11c5_42sxb?authuser=0&entry=ttu&g_ep=EgoyMDI1MDYwOS4xIKXMDSoASAFQAw%3D%3D" target="_blank">View on Map</a>
+    </p>
+    <p>Your presence would provide immense comfort to the family members.</p>
     <img src="picture.jpg" alt="Invitation Image">
+  </div>
   </div>
 
 </body>
