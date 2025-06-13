@@ -1,125 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>INVITATION CARD</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #c1c4c7, #bfd3f4);
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      overflow: auto;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INVITATION CARD</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #c1c4c7, #bfd3f4);
+        font-family: "Segoe UI", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: auto;
+      }
 
-    .wrapper {
-      position: relative;
-      padding-top: 50px; /* ensures space for image overlap */
-    }
+      .wrapper {
+        position: relative;
+        padding-top: 50px; /* ensures space for image overlap */
+      }
 
-    .invitation-card {
-      text-align: center;
-      background: rgb(211, 230, 245);
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-      animation: fadeInScale 1.5s ease-in-out;
-    }
+      .invitation-card {
+        text-align: center;
+        background: rgb(211, 230, 245);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        animation: fadeInScale 1.5s ease-in-out;
+      }
 
-    .invitation-card h1 {
-      font-size: 28px;
-      color: #333;
-      margin-bottom: 20px;
-    }
+      .invitation-card h1 {
+        font-family: "Segoe UI", serif;
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+      }
 
-    .invitation-card img {
-      width: 100%;
-      border-radius: 12px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: showImage 1.5s ease-in-out forwards 1s;
-    }
+      .invitation-card img {
+        width: 100%;
+        border-radius: 12px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: showImage 1.5s ease-in-out forwards 1s;
+      }
 
-    /* hover the image to zoom in and zoom out */
-    /*.invitation-card:hover {
+      /* hover the image to zoom in and zoom out */
+      /*.invitation-card:hover {
         transform: scale(2.05);
     } */
 
-    /*CSS Code: Ultra-Smooth Hover Animation */
+      /*CSS Code: Ultra-Smooth Hover Animation */
 
-        .invitation-card img {
-      width: 100%;
-      border-radius: 12px;
-      transition: 
-        transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), 
-        filter 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), 
-        box-shadow 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
-      transform: scale(1);
-      filter: brightness(1) contrast(1);
-      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    } 
-
-    .invitation-card:hover img {
-      transform: scale(1.08);
-      filter: brightness(1.1) contrast(1.05);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
-      transition-delay: 0.05s;     /* Optional: Delay for more elegance */
-    }
-
-    /* top-right corner image */
-    .top-right-image {
-  position: absolute;
-   margin-top: 40px; /* Increase this for more space from top */
-  top: 60px;          /* Adjust Y-position */
-  right: 60px;        /* Adjust X-position */
-  width: 70px;       /* Control size */
-  height: 80px;
-  border-radius: 50%;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  border: 3px solid white;
-  object-fit: cover;
-  background: white;
-  z-index: 2;
-}
-
-  /* For mobile devices around 6.67" screens */
-@media (max-width: 500px) {
-  .top-right-image {
-    width: 25vw;  /* or use 25vw for responsive width */
-    top: -30px;
-    right: 15px;
-  }
-}
-
-.top-right-image:hover {
-  transform: scale(1.05);
-  opacity: 0.95;
-}
-
-
-
-    /*Responsive Scaling (based on screen size) */
-
-        @media (max-width: 500px) {
-      .invitation-card {
-        transform: scale(0.9);
+      .invitation-card img {
+        width: 100%;
+        border-radius: 12px;
+        transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1),
+          filter 0.8s cubic-bezier(0.25, 0.8, 0.25, 1),
+          box-shadow 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transform: scale(1);
+        filter: brightness(1) contrast(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
       }
-    }
 
-    @media (min-width: 1000px) {
-      .invitation-card {
-       transform: scale(1.1);
+      .invitation-card:hover img {
+        transform: scale(1.08);
+        filter: brightness(1.1) contrast(1.05);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+        transition-delay: 0.05s; /* Optional: Delay for more elegance */
       }
-    }
 
-/*  shift to left side :-
+      /* top-right corner image */
+      .top-right-image {
+        position: absolute;
+        margin-top: 40px; /* Increase this for more space from top */
+        top: 60px; /* Adjust Y-position */
+        right: 60px; /* Adjust X-position */
+        width: 80px; /* Control size */
+        height: 80px;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        border: 1px solid rgb(224, 248, 250);
+        object-fit: cover;
+        background: white;
+        z-index: 2;
+      }
+
+      /* For mobile devices around 6.67" screens */
+      @media (max-width: 500px) {
+        .top-right-image {
+          width: 25vw; /* or use 25vw for responsive width */
+          top: -30px;
+          right: 15px;
+        }
+      }
+
+      .top-right-image:hover {
+        transform: scale(1.05);
+        opacity: 0.95;
+      }
+
+      /*Responsive Scaling (based on screen size) */
+
+      @media (max-width: 500px) {
+        .invitation-card {
+          transform: scale(0.9);
+        }
+      }
+
+      @media (min-width: 1000px) {
+        .invitation-card {
+          transform: scale(1.1);
+        }
+      }
+
+      /*  shift to left side :-
     @media (min-width: 768px) {
   .invitation-card {
     transform: translateX(-80px);
@@ -127,76 +125,77 @@
 }
   */
 
-    @keyframes fadeInScale {
-      0% {
-        opacity: 0;
-        transform: scale(0.8);
+      @keyframes fadeInScale {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
       }
-      100% {
-        opacity: 1;
-        transform: scale(1);
+
+      @keyframes showImage {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
-    }
+    </style>
+  </head>
 
-    @keyframes showImage {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    h3{
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-  </style>
-</head>
-
-
-<script>
+  <script>
     document.addEventListener("keydown", function (event) {
       const scrollAmount = window.innerHeight;
-  
+
       // Only prevent default on these keys
-      if (["PageDown", "ArrowDown", "ArrowUp", "PageUp", " "].includes(event.key)) {
+      if (
+        ["PageDown", "ArrowDown", "ArrowUp", "PageUp", " "].includes(event.key)
+      ) {
         event.preventDefault();
-  
+
         switch (event.key) {
           case "PageDown":
           case "ArrowDown":
           case " ":
-            window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+            window.scrollBy({ top: scrollAmount, behavior: "smooth" });
             break;
-  
+
           case "PageUp":
           case "ArrowUp":
-            window.scrollBy({ top: -scrollAmount, behavior: 'smooth' });
+            window.scrollBy({ top: -scrollAmount, behavior: "smooth" });
             break;
         }
       }
     });
   </script>
-  
-  
-<body>
 
-  <!-- Wrap both inside a relative container -->
-   <div class="wrapper">
-  <!-- Red box image (top-right corner) -->
-  <img src="thakuma.jpg" alt="Top Right Image" class="top-right-image">
+  <body>
+    <!-- Wrap both inside a relative container -->
+    <div class="wrapper">
+      <!-- Red box image (top-right corner) -->
+      <img src="thakuma.jpg" alt="Top Right Image" class="top-right-image" />
 
-  <div class="invitation-card">
-    <h1><u>You're Invited ! </u> </h1>
-    <h4><u>For</u></h4>
-    <h3><u>Funeral Ceremony</u></h3>
-    <p>
-      *Location:*
-      <a href="https://www.google.com/maps/place/ghutgoria+Kali+Mandir/@23.4439942,87.2596343,17z/data=!3m1!4b1!4m6!3m5!1s0x39f7747d6f4a3d19:0x670738ec95685e7!8m2!3d23.4439893!4d87.2622092!16s%2Fg%2F11c5_42sxb?authuser=0&entry=ttu&g_ep=EgoyMDI1MDYwOS4xIKXMDSoASAFQAw%3D%3D" target="_blank">View on Map</a>
-    </p>
-    <p>Your presence would provide immense comfort to the family members.</p>
-    <img src="picture.jpg" alt="Invitation Image">
-  </div>
-  </div>
+      <div class="invitation-card">
+        <h1 style="font-family: 'Times New Roman', serif">
+          <u>Funeral Ceremony</u>
+        </h1>
 
-</body>
+        <p style="font-family: 'Brush Script MT', cursive">
+          Your presence would provide immense comfort to the family members.
+        </p>
+        <p>
+          <strong>*Location:*</strong>
+          <a
+            href="https://www.google.com/maps/place/Dishari+Musical+Group/@23.4445901,87.2615994,271m/data=!3m2!1e3!4b1!4m6!3m5!1s0x39f775f1ed6cec33:0xfdfe8b1f296b345!8m2!3d23.4445889!4d87.2622431!16s%2Fg%2F11nxrwrnth?authuser=0&entry=ttu&g_ep=EgoyMDI1MDYxMC4xIKXMDSoASAFQAw%3D%3D"
+            >View on Map</a
+          >
+        </p>
+        <h5><u>Your Invitation Card </u></h5>
+        <p style="font-family: 'Times New Roman', Times, serif">In Below</p>
+        <img src="picture.jpg" alt="Invitation Image" />
+      </div>
+    </div>
+  </body>
 </html>
